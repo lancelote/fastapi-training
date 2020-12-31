@@ -1,2 +1,5 @@
 # PyCharm
 .idea/
+
+# mypy Cache
+.mypy_cache
