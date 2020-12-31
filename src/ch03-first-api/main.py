@@ -7,11 +7,10 @@ api = fastapi.FastAPI()
 
 
 @api.get("/api/calculate")
-def calculate(x: int, y: int, z: Optional[int] = None):
+def calculate(x: float, y: float, z: Optional[float] = None):
     if z == 0:
         return fastapi.Response(
-            content="error: z cannot be zero",
-            status_code=400
+            content="error: z cannot be zero", status_code=400
         )
 
     value = x + y
