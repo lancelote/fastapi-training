@@ -9,10 +9,9 @@ api = fastapi.FastAPI()
 @api.get("/api/calculate")
 def calculate(x: float, y: float, z: Optional[float] = None):
     if z == 0:
-        return fastapi.Response(
-            content='{"error": "z cannot be zero"}',
+        return fastapi.responses.JSONResponse(
+            content={"error": "z cannot be zero"},
             status_code=400,
-            media_type="application/json",
         )
 
     value = x + y
