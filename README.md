@@ -6,8 +6,8 @@ My code for [Modern APIs with FastAPI and Python Course][1] by Michael Kennedy
 
 - [x] Chapter 1: Welcome to the course
 - [x] Chapter 2: Setup and following along
-- [x] [Chapter 3: Basic API](src/ch03-first-api)
-- [ ] Chapter 4: Modern language foundations
+- [x] [Chapter 3: Basic API](src/ch03)
+- [ ] [Chapter 4: Modern language foundations](src/ch04)
 - [ ] Chapter 5: Building a realistic API
 - [ ] Chapter 6: Error handling and performance
 - [ ] Chapter 7: Accepting inbound data
