@@ -6,3 +6,4 @@ reorder_python_imports==2.3.6
 mypy==0.790
 pytest==6.2.1
 uvicorn==0.13.3
+httpx==0.16.1
