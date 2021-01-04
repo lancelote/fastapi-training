@@ -15,5 +15,15 @@ def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
+@api.get("/favicon.ico")
+def favicon():
+    return fastapi.responses.RedirectResponse(url="/static/img/favicon.ico")
+
+
+@api.get("/api/weather")
+def weather():
+    return "some report"
+
+
 if __name__ == "__main__":
     uvicorn.run(api, host="127.0.0.1", port=8000)
