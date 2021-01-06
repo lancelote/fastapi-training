@@ -9,3 +9,4 @@ httpx==0.16.1
 starlette==0.13.6
 jinja2==2.11.2
 aiofiles==0.6.0
+pydantic==1.7.3
