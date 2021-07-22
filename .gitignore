@@ -3,3 +3,6 @@
 
 # mypy Cache
 .mypy_cache
+
+# Secrets
+settings.json
