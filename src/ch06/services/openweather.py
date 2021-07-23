@@ -1,4 +1,5 @@
 import httpx
+from infrastructure import cache
 
 api_key: str | None = None
 
@@ -6,6 +7,9 @@ api_key: str | None = None
 async def get_report(
     city: str, state: str | None, country: str, units: str
 ) -> dict:
+    if forecast := cache.get_weather(city, state, country, units):
+        return forecast
+
     base_url = "https://api.openweathermap.org/data/2.5/weather"
     if state:
         query = f"{city},{state},{country}"
@@ -19,4 +23,6 @@ async def get_report(
 
     data = response.json()
     forecast = data["main"]
+
+    cache.set_weather(city, state, country, units, forecast)
     return forecast
