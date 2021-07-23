@@ -1,4 +1,5 @@
 import httpx
+
 from infrastructure import cache
 
 api_key: str | None = None

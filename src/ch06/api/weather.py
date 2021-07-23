@@ -2,6 +2,7 @@ from typing import Optional
 
 import fastapi
 from fastapi import Depends
+
 from models.location import Location
 from services import openweather
 
