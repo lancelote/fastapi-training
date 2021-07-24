@@ -9,7 +9,7 @@ My code for [Modern APIs with FastAPI and Python Course][1] by Michael Kennedy
 - [x] [Chapter 3: Basic API](src/ch03)
 - [x] Chapter 4: Modern language foundations
 - [x] [Chapter 5: Building a realistic API](src/ch05)
-- [ ] [Chapter 6: Error handling and performance](src/ch06)
+- [x] [Chapter 6: Error handling and performance](src/ch06)
 - [ ] Chapter 7: Accepting inbound data
 - [ ] Chapter 8: Deploying FastAPI on Linux with gunicorn and nginx
 - [ ] Chapter 9: Course conclusion and review
