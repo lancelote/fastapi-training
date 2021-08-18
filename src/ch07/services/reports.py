@@ -1,4 +1,5 @@
 import datetime
+import uuid
 
 from models.location import Location
 from models.report import Report
@@ -14,7 +15,10 @@ async def get_reports() -> list[Report]:
 async def add_report(description: str, location: Location) -> Report:
     now = datetime.datetime.now()
     report = Report(
-        description=description, location=location, created_date=now
+        id=str(uuid.uuid4()),
+        description=description,
+        location=location,
+        created_date=now,
     )
 
     # Simulate saving to a DB
