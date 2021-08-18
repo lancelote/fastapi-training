@@ -12,14 +12,17 @@ repos:
     rev: 21.7b0
     hooks:
       - id: black
+        args: ["--line-length=79", "--target-version=py39"]
+        exclude: ^(\.git/|\.idea/)
 
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
+        args: ["--max-line-length=79"]
 
   - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.5.0
+    rev: v2.6.0
     hooks:
       - id: reorder-python-imports
-        args: ["--application-directories=src/ch05:src/ch06"]
+        args: ["--application-directories=src/ch03:src/ch05:src/ch06:src/ch07"]
