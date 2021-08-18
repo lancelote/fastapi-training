@@ -36,7 +36,7 @@ async def reports_get() -> list[Report]:
     return await reports.get_reports()
 
 
-@router.post("/api/reports", name="add_report")
+@router.post("/api/reports", name="add_report", status_code=201)
 async def reports_post(report_submittal: ReportSubmittal) -> Report:
     description = report_submittal.description
     location = report_submittal.location
