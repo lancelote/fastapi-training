@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name weatherapi.talkpython.com 68.183.2.4;
+    server_name 68.183.2.4;
     server_tokens off;
     charset utf-8;
 
