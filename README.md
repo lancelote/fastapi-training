@@ -11,7 +11,7 @@ My code for [Modern APIs with FastAPI and Python Course][1] by Michael Kennedy
 - [x] [Chapter 5: Building a realistic API](src/ch05)
 - [x] [Chapter 6: Error handling and performance](src/ch06)
 - [x] [Chapter 7: Accepting inbound data](src/ch07)
-- [ ] [Chapter 8: Deploying FastAPI on Linux with gunicorn and nginx](src/ch08)
+- [x] [Chapter 8: Deploying FastAPI on Linux with gunicorn and nginx](src/ch08)
 - [ ] Chapter 9: Course conclusion and review
 
 [1]: https://training.talkpython.fm/courses/getting-started-with-fastapi
