@@ -35,7 +35,7 @@ sudo mkdir -p /apps/logs/weather_api/app_log
 # Prepare the venv
 python3 -mvenv /apps/.venv
 source /apps/.venv/bin/activate
-pip install --upgrade pip setuptools
+pip install --upgrade pip setuptools wheel
 pip install --upgrade httpie glances
 pip install --upgrade gunicorn uvloop httptools
 
