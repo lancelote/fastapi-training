@@ -1,0 +1,12 @@
+POST http://127.0.0.1:8000/api/reports
+Content-Type: application/json
+
+{
+  "description": "There is heavy rain!",
+  "location": {
+    "city": "Portland",
+    "state": "OR"
+  }
+}
+
+###
