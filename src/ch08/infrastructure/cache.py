@@ -1,5 +1,6 @@
 import datetime
 from typing import Optional
+from typing import Tuple
 
 __cache = {}
 LIFETIME_IN_HOURS = 1.0
@@ -43,7 +44,7 @@ def set_weather(
 
 def __create_key(
     city: str, state: str, country: str, units: str
-) -> tuple[str, str, str, str]:
+) -> Tuple[str, str, str, str]:
     if not city or not country or not units:
         raise Exception("City, county, and units are required")
     return (

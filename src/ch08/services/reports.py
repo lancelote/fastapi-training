@@ -1,13 +1,14 @@
 import datetime
 import uuid
+from typing import List
 
 from models.location import Location
 from models.report import Report
 
-__reports: list[Report] = []
+__reports: List[Report] = []
 
 
-async def get_reports() -> list[Report]:
+async def get_reports() -> List[Report]:
     # Would be an async call in the real application
     return __reports.copy()
 

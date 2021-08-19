@@ -1,4 +1,5 @@
 from typing import Optional
+from typing import Tuple
 
 import httpx
 from httpx import Response
@@ -39,7 +40,7 @@ async def get_report(
 
 def validate_units(
     city: str, state: Optional[str], country: str, units: str
-) -> tuple[str, Optional[str], str, str]:
+) -> Tuple[str, Optional[str], str, str]:
     city = city.lower().strip()
     if not country:
         country = "us"

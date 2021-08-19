@@ -1,3 +1,4 @@
+from typing import List
 from typing import Optional
 
 import fastapi
@@ -31,8 +32,8 @@ async def weather(loc: Location = Depends(), units: Optional[str] = "metric"):
         )
 
 
-@router.get("/api/reports", name="all_reports", response_model=list[Report])
-async def reports_get() -> list[Report]:
+@router.get("/api/reports", name="all_reports", response_model=List[Report])
+async def reports_get() -> List[Report]:
     return await reports.get_reports()
 
 
