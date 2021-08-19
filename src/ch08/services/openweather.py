@@ -1,14 +1,16 @@
+from typing import Optional
+
 import httpx
 from httpx import Response
 
 from infrastructure import cache
 from models.validation_error import ValidationError
 
-api_key: str | None = None
+api_key: Optional[str] = None
 
 
 async def get_report(
-    city: str, state: str | None, country: str, units: str
+    city: str, state: Optional[str], country: str, units: str
 ) -> dict:
     city, state, country, units = validate_units(city, state, country, units)
 
@@ -36,8 +38,8 @@ async def get_report(
 
 
 def validate_units(
-    city: str, state: str | None, country: str, units: str
-) -> tuple[str, str | None, str, str]:
+    city: str, state: Optional[str], country: str, units: str
+) -> tuple[str, Optional[str], str, str]:
     city = city.lower().strip()
     if not country:
         country = "us"

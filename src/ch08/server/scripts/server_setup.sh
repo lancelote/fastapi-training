@@ -41,7 +41,7 @@ pip install --upgrade gunicorn uvloop httptools
 
 # Deploy to /apps/app/ and then
 git clone https://github.com/lancelote/fastapi-training.git /apps/app
-pip install -r /apps/app/src/ch08/requirements.txt
+pip install -r /apps/app/requirements.txt
 
 # Copy and enable the daemon
 cp /apps/app/src/ch08/server/units/weather.service /etc/systemd/system

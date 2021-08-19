@@ -1,4 +1,5 @@
 import datetime
+from typing import Optional
 
 __cache = {}
 LIFETIME_IN_HOURS = 1.0
@@ -6,10 +7,10 @@ LIFETIME_IN_HOURS = 1.0
 
 def get_weather(
     city: str,
-    state: str | None,
+    state: Optional[str],
     country: str,
     units: str,
-) -> dict | None:
+) -> Optional[dict]:
     key = __create_key(city, state, country, units)
     data = __cache.get(key)
 
