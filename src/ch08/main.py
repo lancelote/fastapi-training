@@ -25,8 +25,8 @@ def configure_api_keys():
     file = Path("settings.json").absolute()
     if not file.exists():
         raise Exception(
-            "settings.json not found,"
-            "your cannot continue,"
+            "settings.json not found, "
+            "your cannot continue, "
             "please see settings_template.json"
         )
 
