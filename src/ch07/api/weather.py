@@ -31,12 +31,14 @@ async def weather(loc: Location = Depends(), units: Optional[str] = "metric"):
         )
 
 
-@router.get("/api/reports", name="all_reports")
+@router.get("/api/reports", name="all_reports", response_model=list[Report])
 async def reports_get() -> list[Report]:
     return await reports.get_reports()
 
 
-@router.post("/api/reports", name="add_report", status_code=201)
+@router.post(
+    "/api/reports", name="add_report", status_code=201, response_model=Report
+)
 async def reports_post(report_submittal: ReportSubmittal) -> Report:
     description = report_submittal.description
     location = report_submittal.location
